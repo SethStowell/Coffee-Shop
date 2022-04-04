@@ -3,7 +3,7 @@ from customer import Customer
 from lineitem import LineItem
 from order import Order
 from product import Product
-from shippingMethod import ShippingMethod
+from shipping import ShippingMethod
 from address import Address
 
 def test():

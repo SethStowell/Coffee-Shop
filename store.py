@@ -1,6 +1,6 @@
 from product import Product
 from customer import Customer
-from shippingmethod import ShippingMethod
+from shipping import Shipping
 
 class Store(object):
 
