@@ -24,7 +24,13 @@ class Store(object):
         Read the available products from a file, creates Product objects for them, and
         puts them in the product list.
         """
-        pass
+        with open(filename, 'r') as productsFile:
+           for line in productsFile:
+               name, type, price = line.split(',')
+               try:
+                   self._products.append(Product(name, type, price))
+               except TypeError:
+                   print(f'{name} not added to inventory. Check {filename}.')
 
     def read_shipping_methods(self, filename):
         """
